@@ -27,6 +27,11 @@ function App() {
 
   return (
     <div>
+      {
+        !image
+          ? <div>Loading...</div>
+          : <h1>Loaded</h1>
+      }
       <img src={image} />
     </div>
   )
