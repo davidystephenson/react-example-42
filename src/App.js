@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Hello from './components/Hello'
+import Articles from './components/Articles'
 import axios from 'axios' 
 
 function App() {
@@ -30,7 +31,10 @@ function App() {
   //   : <div>Loading...</div>
 
   if (image) {
-    return <img src={image} />
+    return <div>
+      <Articles />
+      <img src={image} />
+    </div>
   }
 
   return <h1>Loading....</h1>
