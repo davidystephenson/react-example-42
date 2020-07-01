@@ -3,7 +3,7 @@ import Hello from './components/Hello'
 import axios from 'axios' 
 
 function App() {
-  const [image, setImage] = useState('')
+  const [image, setImage] = useState(false)
 
   async function getDog () {
     try {
@@ -25,16 +25,15 @@ function App() {
   // This makes the function run only 1 time
   useEffect(effect, [])
 
-  return (
-    <div>
-      {
-        !image
-          ? <div>Loading...</div>
-          : <h1>Loaded</h1>
-      }
-      <img src={image} />
-    </div>
-  )
+  // return image
+  //   ? <img src={image} />
+  //   : <div>Loading...</div>
+
+  if (image) {
+    return <img src={image} />
+  }
+
+  return <h1>Loading....</h1>
 }
 
 export default App;
