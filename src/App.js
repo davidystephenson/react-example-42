@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Hello from './components/Hello'
-import Articles from './components/Articles'
+import ArticleList from './components/ArticleList'
 import axios from 'axios' 
 
 function App() {
@@ -32,8 +31,8 @@ function App() {
 
   if (image) {
     return <div>
-      <Articles />
-      <img src={image} />
+      <ArticleList />
+      <img src={image} alt='dog' />
     </div>
   }
 
